@@ -1,0 +1,21 @@
+research_task:
+  description: >
+    Conduct a thorough research about AI LLMs. Make sure you find any 
+    interesting and relevant information given the current year is 2025.
+    Focus on recent developments, capabilities, and trends.
+  expected_output: >
+    A comprehensive research report about AI LLMs including recent 
+    developments, trends, and insights for 2025.
+
+reporting_task:
+  description: >
+    Using the research findings about AI LLMs, create a detailed and well-structured 
+    report. The report should be easy to read and include key insights, trends, 
+    and recommendations based on the research data.
+  expected_output: >
+    A well-formatted report with executive summary, key findings, trends analysis, 
+    and actionable recommendations about AI LLMs for 2025.
+  context:
+    - research_task
+
+    
