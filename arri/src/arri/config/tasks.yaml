@@ -1,21 +1,95 @@
-research_task:
+project_planning:
   description: >
-    Conduct a thorough research about AI LLMs. Make sure you find any 
-    interesting and relevant information given the current year is 2025.
-    Focus on recent developments, capabilities, and trends.
-  expected_output: >
-    A comprehensive research report about AI LLMs including recent 
-    developments, trends, and insights for 2025.
-
-reporting_task:
-  description: >
-    Using the research findings about AI LLMs, create a detailed and well-structured 
-    report. The report should be easy to read and include key insights, trends, 
-    and recommendations based on the research data.
-  expected_output: >
-    A well-formatted report with executive summary, key findings, trends analysis, 
-    and actionable recommendations about AI LLMs for 2025.
-  context:
-    - research_task
-
+    As the project manager, create a comprehensive project plan for researching 
+    the topic: {topic}
     
+    Your plan should include:
+    1. Define clear research objectives and scope for the given topic
+    2. Identify key areas to investigate based on the topic type
+    3. Outline the research methodology appropriate for this subject
+    4. Set quality standards for deliverables
+    5. Create a timeline for task completion
+    
+    Adapt your approach based on whether the topic is:
+    - A product/service (focus on specifications, features, reviews)
+    - A concept/idea (focus on definitions, theories, applications)
+    - A process/method (focus on steps, benefits, implementation)
+    - A health/lifestyle topic (focus on evidence-based information, methods, safety)
+    
+    Do NOT delegate this task - complete the planning yourself based on your 
+    expertise in project management.
+  expected_output: >
+    A detailed project plan with clear objectives, methodology, timeline, 
+    and quality standards tailored to researching: {topic}
+  agent: project_manager
+
+research_execution:
+  description: >
+    Execute comprehensive research on the topic: {topic}
+    following the project plan guidelines.
+    
+    Adapt your research approach based on the topic type:
+    
+    For products/vehicles: specifications, features, reviews, pricing, comparisons
+    For health/fitness topics: evidence-based methods, safety considerations, expert recommendations
+    For concepts/ideas: definitions, theories, applications, current research
+    For processes/methods: step-by-step approaches, benefits, implementation guides
+    
+    Use credible sources appropriate to the topic:
+    - Academic sources and peer-reviewed research
+    - Official documentation and specifications
+    - Expert reviews and professional analysis
+    - Government databases when applicable
+    - Reputable news and industry publications
+    
+    Ensure all information is current, accurate, and from authoritative sources.
+  expected_output: >
+    Comprehensive research report with detailed information, facts, 
+    and sourced data relevant to: {topic}
+  agent: researcher
+
+analysis_execution:
+  description: >
+    Analyze the research findings for the topic: {topic} to extract meaningful 
+    insights and provide expert analysis.
+    
+    Adapt your analysis based on the topic type:
+    
+    For products: performance analysis, value assessment, competitive comparison
+    For health/fitness: effectiveness evaluation, safety analysis, suitability assessment
+    For concepts: practical applications, strengths/limitations, real-world relevance
+    For processes: efficiency analysis, implementation challenges, success factors
+    
+    Focus on:
+    1. Key insights and findings
+    2. Comparative analysis where relevant
+    3. Strengths and limitations identification
+    4. Practical implications and applications
+    5. Evidence quality assessment
+    6. Recommendations based on findings
+  expected_output: >
+    Analytical report with insights, evaluations, comparative analysis, 
+    and evidence-based recommendations for: {topic}
+  agent: analyst
+
+report_writing:
+  description: >
+    Create a comprehensive final report on: {topic}
+    that synthesizes all research and analysis.
+    
+    Adapt the report structure based on the topic type, but generally include:
+    1. Executive summary
+    2. Introduction and background
+    3. Detailed findings by category
+    4. Analysis and insights
+    5. Practical applications/implications
+    6. Recommendations and conclusions
+    7. Sources and references
+    
+    Ensure professional formatting with clear sections, organized information, 
+    and easy-to-read layout. Tailor the language and depth to be appropriate 
+    for the subject matter.
+  expected_output: >
+    Professional, comprehensive report integrating all research and analysis 
+    into a complete guide for: {topic}
+  agent: writer
